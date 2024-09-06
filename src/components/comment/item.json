@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_comment_items",
+  "info": {
+    "displayName": "item",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "user": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}

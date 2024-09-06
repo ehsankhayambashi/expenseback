@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "keyfeatures",
+  "info": {
+    "singularName": "keyfeature",
+    "pluralName": "keyfeatures",
+    "displayName": "keyfeature"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "keyfeatureitem": {
+      "type": "dynamiczone",
+      "components": [
+        "feature.item"
+      ]
+    }
+  }
+}

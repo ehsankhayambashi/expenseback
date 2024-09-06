@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "usercomments",
+  "info": {
+    "singularName": "usercomment",
+    "pluralName": "usercomments",
+    "displayName": "usercomment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usercomment": {
+      "type": "dynamiczone",
+      "components": [
+        "comment.item"
+      ]
+    }
+  }
+}
