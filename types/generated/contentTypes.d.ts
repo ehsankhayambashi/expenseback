@@ -928,6 +928,32 @@ export interface ApiMetaMeta extends Schema.SingleType {
   };
 }
 
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'post';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slug: Attribute.String;
+    body: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubCategorySubCategory extends Schema.CollectionType {
   collectionName: 'sub_categories';
   info: {
@@ -1021,6 +1047,7 @@ declare module '@strapi/types' {
       'api::expense.expense': ApiExpenseExpense;
       'api::keyfeature.keyfeature': ApiKeyfeatureKeyfeature;
       'api::meta.meta': ApiMetaMeta;
+      'api::post.post': ApiPostPost;
       'api::sub-category.sub-category': ApiSubCategorySubCategory;
       'api::usercomment.usercomment': ApiUsercommentUsercomment;
     }

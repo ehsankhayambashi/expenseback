@@ -1,0 +1,15 @@
+{
+    "platform": "node",
+    "app": "expense",
+    "port": 3000,
+    "disks": [
+        {
+            "name": "database",
+            "mountTo": "/app/.tmp"
+        },
+        {
+            "name":"media",
+            "mountTo":"public/uploads"
+        }
+    ]
+  }
